@@ -1,0 +1,34 @@
+{
+  "welcomeFile": "index.html",
+  "authenticationMethod": "route",
+  "logout": {
+    "logoutEndpoint": "/logout",
+    "logoutPage": "logout.html"
+  },
+  "routes": [
+    {
+      "source": "/ppping",
+      "target": "/sap/public/ping",
+      "destination": "SAP_HTTPS_EJ_BERTPP"
+    },
+    {
+      "source": "/baping",
+      "target": "/sap/public/ping",
+      "destination": "SAP_HTTPS_EJ_BERTTEST"
+    },
+
+   
+   
+    {
+      "source": "^/index.html$",
+      "localDir": "resources",
+      "authenticationType": "xsuaa",
+      "cacheControl": "no-cache, no-store"
+    },
+    {
+      "source": "^/logout.html$",
+      "localDir": "resources",
+      "authenticationType": "none"
+    }
+  ]
+}

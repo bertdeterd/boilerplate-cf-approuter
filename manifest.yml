@@ -1,0 +1,14 @@
+---
+#application settings
+applications:
+
+- name: bdxapprouter                             
+  memory: 128M 
+  path: web  
+ 
+  services:                       
+    - my-uaa  
+    - my-destination
+    - my-connectivity  
+    - my-html5-runtime       
+   

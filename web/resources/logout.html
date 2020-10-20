@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <v-content>
+                <v-jumbotron>
+                    <v-container fill-height>
+                        <v-layout align-center>
+                            <v-flex>
+                                <h3 class="display-3">U bent uitgelogd</h3>
+
+                                <v-divider class="my-3"></v-divider>
+
+                                <v-btn v-on:click="login" class="mx-0" color="primary" large>
+                                    Log in
+                                </v-btn>
+                            </v-flex>
+                        </v-layout>
+                    </v-container>
+                </v-jumbotron>
+            </v-content>
+        </v-app>
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+    <script>
+        new Vue(
+            {
+                el: '#app',
+                methods: {
+                    login: function (event) {
+                        window.location.replace("/index.html");
+                    }
+
+                }
+            }
+        )
+    </script>
+</body>
+
+</html>
